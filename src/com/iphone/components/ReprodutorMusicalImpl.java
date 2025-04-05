@@ -1,7 +1,6 @@
 package com.iphone.components;
 
-public class ReprodutorMusicalImpl implements ReprodutorMusical {
-	
+public class ReprodutorMusicalImpl implements ReprodutorMusical {	
     @Override
     public void tocar() {
         System.out.println("Tocando música...");
