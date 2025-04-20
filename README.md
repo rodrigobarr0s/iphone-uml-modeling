@@ -45,48 +45,48 @@ phone-uml-modeling
 
 O diagrama UML a seguir representa as interações entre as classes e suas funcionalidades.
 
-```plantuml
-@startuml
-interface ReprodutorMusical {
-    +tocar()
-    +pausar()
-    +selecionarMusica(musica: String)
-}
+```mermaid
+classDiagram
+    class ReprodutorMusical {
+        +tocar()
+        +pausar()
+        +selecionarMusica(musica: String)
+    }
 
-class ReprodutorMusicalImpl {
-    +tocar()
-    +pausar()
-    +selecionarMusica(musica: String)
-}
+    class ReprodutorMusicalImpl {
+        +tocar()
+        +pausar()
+        +selecionarMusica(musica: String)
+    }
 
-interface AparelhoTelefonico {
-    +ligar(numero: String)
-    +atender()
-    +iniciarCorreioVoz()
-}
+    class AparelhoTelefonico {
+        +ligar(numero: String)
+        +atender()
+        +iniciarCorreioVoz()
+    }
 
-class AparelhoTelefonicoImpl {
-    +ligar(numero: String)
-    +atender()
-    +iniciarCorreioVoz()
-}
+    class AparelhoTelefonicoImpl {
+        +ligar(numero: String)
+        +atender()
+        +iniciarCorreioVoz()
+    }
 
-interface NavegadorInternet {
-    +exibirPagina(url: String)
-    +adicionarNovaAba()
-    +atualizarPagina()
-}
+    class NavegadorInternet {
+        +exibirPagina(url: String)
+        +adicionarNovaAba()
+        +atualizarPagina()
+    }
 
-class NavegadorInternetImpl {
-    +exibirPagina(url: String)
-    +adicionarNovaAba()
-    +atualizarPagina()
-}
+    class NavegadorInternetImpl {
+        +exibirPagina(url: String)
+        +adicionarNovaAba()
+        +atualizarPagina()
+    }
 
-ReprodutorMusical --|> ReprodutorMusicalImpl
-AparelhoTelefonico --|> AparelhoTelefonicoImpl
-NavegadorInternet --|> NavegadorInternetImpl
-@enduml
+    ReprodutorMusical <|-- ReprodutorMusicalImpl
+    AparelhoTelefonico <|-- AparelhoTelefonicoImpl
+    NavegadorInternet <|-- NavegadorInternetImpl
+
 ```
 
 ### Explicação do Diagrama UML:
